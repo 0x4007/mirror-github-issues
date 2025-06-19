@@ -37,7 +37,7 @@ jobs:
     - name: Run mirror issues script
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        TARGET_REPO: ${{ vars.TARGET_REPO || 'ubiquity/test-repo' }}
+        TARGET_REPO: ${{ vars.TARGET_REPO || 'ShivTestOrg/repo-price' }}
         BATCH_SIZE: ${{ inputs.batch_size }}
       run: bun run src/mirror-issues.ts
 
