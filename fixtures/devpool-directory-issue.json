@@ -1,0 +1,98 @@
+{
+  "url": "https://api.github.com/repos/ubiquity/devpool-directory/issues/2903",
+  "repository_url": "https://api.github.com/repos/ubiquity/devpool-directory",
+  "labels_url": "https://api.github.com/repos/ubiquity/devpool-directory/issues/2903/labels{/name}",
+  "comments_url": "https://api.github.com/repos/ubiquity/devpool-directory/issues/2903/comments",
+  "events_url": "https://api.github.com/repos/ubiquity/devpool-directory/issues/2903/events",
+  "html_url": "https://github.com/ubiquity/devpool-directory/issues/2903",
+  "id": 3158083889,
+  "node_id": "I_kwDOJWyCVM68PIkx",
+  "number": 2903,
+  "title": "Health Dashboard",
+  "user": {
+    "login": "devpool-directory-superintendent[bot]",
+    "id": 179499210,
+    "node_id": "BOT_kgDOCrLwyg",
+    "avatar_url": "https://avatars.githubusercontent.com/in/979607?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/devpool-directory-superintendent%5Bbot%5D",
+    "html_url": "https://github.com/apps/devpool-directory-superintendent",
+    "followers_url": "https://api.github.com/users/devpool-directory-superintendent%5Bbot%5D/followers",
+    "following_url": "https://api.github.com/users/devpool-directory-superintendent%5Bbot%5D/following{/other_user}",
+    "gists_url": "https://api.github.com/users/devpool-directory-superintendent%5Bbot%5D/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/devpool-directory-superintendent%5Bbot%5D/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/devpool-directory-superintendent%5Bbot%5D/subscriptions",
+    "organizations_url": "https://api.github.com/users/devpool-directory-superintendent%5Bbot%5D/orgs",
+    "repos_url": "https://api.github.com/users/devpool-directory-superintendent%5Bbot%5D/repos",
+    "events_url": "https://api.github.com/users/devpool-directory-superintendent%5Bbot%5D/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/devpool-directory-superintendent%5Bbot%5D/received_events",
+    "type": "Bot",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 5906090761,
+      "node_id": "LA_kwDOJWyCVM8AAAABYAfLCQ",
+      "url": "https://api.github.com/repos/ubiquity/devpool-directory/labels/Time:%20%3C2%20Hours",
+      "name": "Time: <2 Hours",
+      "color": "ededed",
+      "default": false,
+      "description": null
+    },
+    {
+      "id": 5906091040,
+      "node_id": "LA_kwDOJWyCVM8AAAABYAfMIA",
+      "url": "https://api.github.com/repos/ubiquity/devpool-directory/labels/Priority:%201%20(Normal)",
+      "name": "Priority: 1 (Normal)",
+      "color": "ededed",
+      "default": false,
+      "description": null
+    },
+    {
+      "id": 8804567778,
+      "node_id": "LA_kwDOJWyCVM8AAAACDMsK4g",
+      "url": "https://api.github.com/repos/ubiquity/devpool-directory/labels/id:%20I_kwDOO9rGXc68PB60",
+      "name": "id: I_kwDOO9rGXc68PB60",
+      "color": "ededed",
+      "default": false,
+      "description": null
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2025-06-18T20:30:42Z",
+  "updated_at": "2025-06-19T16:47:15Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "type": null,
+  "active_lock_reason": null,
+  "sub_issues_summary": {
+    "total": 0,
+    "completed": 0,
+    "percent_completed": 0
+  },
+  "body": "https://github.com/ubiquity/ubq.fi-router/issues/3",
+  "closed_by": null,
+  "reactions": {
+    "url": "https://api.github.com/repos/ubiquity/devpool-directory/issues/2903/reactions",
+    "total_count": 0,
+    "+1": 0,
+    "-1": 0,
+    "laugh": 0,
+    "hooray": 0,
+    "confused": 0,
+    "heart": 0,
+    "rocket": 0,
+    "eyes": 0
+  },
+  "timeline_url": "https://api.github.com/repos/ubiquity/devpool-directory/issues/2903/timeline",
+  "performed_via_github_app": null,
+  "state_reason": null
+}
