@@ -1,0 +1,50 @@
+name: Mirror Issues
+
+on:
+  workflow_dispatch:
+    inputs:
+      batch_size:
+        description: 'Number of issues to copy (default: 5)'
+        required: false
+        default: 5
+        type: number
+      force_refresh_cache:
+        description: 'Force refresh the source issues cache'
+        required: false
+        default: false
+        type: boolean
+
+jobs:
+  mirror-issues:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Setup Bun
+      uses: oven-sh/setup-bun@v1
+      with:
+        bun-version: latest
+
+    - name: Install dependencies
+      run: bun install
+
+    - name: Clear cache if requested
+      if: ${{ inputs.force_refresh_cache }}
+      run: rm -f source-issues-cache.json
+
+    - name: Run mirror issues script
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        TARGET_REPO: ${{ vars.TARGET_REPO || 'ShivTestOrg/repo-price' }}
+        BATCH_SIZE: ${{ inputs.batch_size }}
+      run: bun run src/mirror-issues.ts
+
+    - name: Upload cache as artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: source-issues-cache
+        path: source-issues-cache.json
+        retention-days: 1
+        if-no-files-found: ignore
