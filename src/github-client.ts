@@ -1,5 +1,5 @@
 // github-client.ts
-import { Octokit } from "npm:octokit"
+import { Octokit } from "octokit"
 
 declare const process: {
   env: {

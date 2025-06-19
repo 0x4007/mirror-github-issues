@@ -1,7 +1,12 @@
 // get-referenced-issue.ts
-import { octokit } from "./github-client"
+import { octokit } from "./github-client.ts"
 
-export async function getReferencedIssue(url: string): Promise<string | null> {
+export interface ReferencedIssue {
+  title: string
+  body: string
+}
+
+export async function getReferencedIssue(url: string): Promise<ReferencedIssue | null> {
   try {
     const match = url.match(/github\.com\/([^/]+)\/([^/]+)\/issues\/(\d+)/)
     if (!match) return null
@@ -13,7 +18,10 @@ export async function getReferencedIssue(url: string): Promise<string | null> {
       issue_number: parseInt(issueNumber)
     })
 
-    return issue.body
+    return {
+      title: issue.title,
+      body: issue.body || ""
+    }
   } catch {
     return null
   }
