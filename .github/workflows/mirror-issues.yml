@@ -37,11 +37,21 @@ jobs:
     - name: Run mirror issues script
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        TARGET_REPO: ${{ vars.TARGET_REPO || 'ShivTestOrg/repo-price' }}
+        TARGET_REPO: ${{ vars.TARGET_REPO || 'ubiquity/test-repo' }}
         BATCH_SIZE: ${{ inputs.batch_size }}
       run: bun run src/mirror-issues.ts
 
-    - name: Upload cache as artifact
+    - name: Commit updated cache
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add source-issues-cache.json
+        git diff --staged --quiet || git commit -m "Update source issues cache [skip ci]"
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Upload cache as artifact (backup)
       uses: actions/upload-artifact@v4
       with:
         name: source-issues-cache

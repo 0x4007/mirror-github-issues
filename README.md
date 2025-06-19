@@ -52,7 +52,8 @@ This repository includes a GitHub Action that can be triggered manually from the
 - **Manual Dispatch**: Run on-demand from GitHub UI
 - **Configurable Batch Size**: Choose how many issues to copy per run
 - **Cache Management**: Option to force refresh the source issues cache
-- **Artifact Upload**: Saves cache file as artifact for faster subsequent runs
+- **Automatic Cache Commits**: Updates and commits the cache file back to the repository after each run
+- **Artifact Upload**: Saves cache file as artifact for faster subsequent runs (backup)
 
 ## How It Works
 
