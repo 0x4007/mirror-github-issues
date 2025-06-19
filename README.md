@@ -99,7 +99,8 @@ Checked 18/1675 source issues
 
 - Source issues are cached for 1 hour in `source-issues-cache.json`
 - Cache can be manually cleared by deleting the file or using the "force refresh" option in GitHub Actions
-- Cache file is automatically ignored by git
+- Cache file is automatically committed to the repository after each GitHub Actions run
+- This ensures the cache persists across runs and stays up-to-date
 
 ## Development
 
